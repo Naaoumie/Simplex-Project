@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Website</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Ajout de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: blue; /* Nouvelle couleur de fond */
+            padding: 15px 0;
+            margin-bottom: 20px; /* Ajout d'un espace en bas de la barre de navigation */
+        }
+        .navbar ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .navbar ul li a:hover {
+            color: #f39c12;
+        }
+        .about_section{
+            width: 100%;
+            height: auto;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            font-family: 'Poppins', sans-serif;
+        }
+        .about_img img{
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        }
+        .about_details {
+            max-width: 500px;
+            margin-left: 50px;
+        }
+        .about_details h1{
+            font-size: 48px;
+            color: black;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .about_details h1::after{
+            content: " ";
+            position: absolute;
+            width: 120px;
+            height: 4px;
+            background-color: blue;
+            border-radius: 5px;
+            left: 0;
+            bottom: -10px;
+        }
+        .about_details p{
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btns {
+            display: flex;
+        }
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover{
+            background-color: #f39c12;
+        }
+        /* Style pour les logos des réseaux sociaux */
+        .social-icons {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: blue;
+            font-size: 24px;
+        }
+        .social-icons a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="intro1.html">Introduction</a></li>
+            <li><a href="main.html">Page simplexe</a></li>
+            <li><a href="login3.html">login</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
+        </ul>
+    </div>
+    
+    <section class="about_section" id="About">
+        <div class="about_img">
+            <img src="2.png" alt="">
+        </div>
+        <div class="about_details">
+            <h1>About Me</h1>
+            <p>En tant qu'étudiante en troisième année d'informatique, je suis passionnée par les défis intellectuels que ce domaine offre. Ma fascination pour la technologie et son potentiel à transformer notre monde m'a motivée à poursuivre des études approfondies dans ce domaine en constante évolution. Au cours de mes études, j'ai développé une solide compréhension des principes fondamentaux de l'informatique, ainsi que des compétences pratiques dans la programmation, la conception de systèmes et la résolution de problèmes complexes.</p>
+            
+        </div>
+    </section>
+    
+    <!-- Ajout des logos des réseaux sociaux -->
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <!-- Ajoutez d'autres icônes de réseaux sociaux selon vos besoins -->
+    </div>
+</body>
+</html>

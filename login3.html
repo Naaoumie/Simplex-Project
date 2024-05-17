@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="./STYLEA.css" />
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <div class="forms-container">
+    <div class="signin-signup">
+      <form action="main.html" method="post" class="sign-in-form" id="loginForm">
+        <h2 class="title">Sign In</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" placeholder="Username" required/>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" required/>
+        </div>
+        <input type="submit" value="Login" class="btn solid" />
+        <p class="social-text">Or Sign in with social platforms</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="panels-container">
+    <div class="panel left-panel">
+        <div class="content">
+            <h3>New here?</h3>
+            <p>This application aims to provide a user-friendly interface for solving linear programming problems using the simplex algorithm.</p>
+            <!-- Le bouton Sign Up a été supprimé -->
+        </div>
+        <img src="./img/log.svg" class="image" alt="">
+    </div>
+    <div class="panel right-panel">
+        <div class="content">
+            <h3>One of us?</h3>
+            <p>This application aims to provide a user-friendly interface for solving linear programming problems using the simplex algorithm.</p>
+            <!-- Le bouton Sign In a été supprimé -->
+        </div>
+        <img src="./img/register.svg" class="image" alt="">
+    </div>
+  </div>
+</div>
+<script>
+const container = document.querySelector('.container');
+
+// Suppression des boutons Sign Up et Sign In
+const signUpButton = document.getElementById('sign-up-btn');
+const signInButton = document.getElementById('sign-in-btn');
+signUpButton.style.display = 'none';
+signInButton.style.display = 'none';
+
+// Redirection vers main.html lors de la soumission du formulaire de connexion
+const signInForm = document.querySelector('.sign-in-form');
+signInForm.addEventListener('submit', function(event) {
+  const username = signInForm.querySelector('input[name="username"]').value;
+  const password = signInForm.querySelector('input[name="password"]').value;
+
+  if (!username || !password) {
+    alert("Please fill in all fields!");
+    event.preventDefault(); // Empêche la soumission du formulaire si tous les champs ne sont pas remplis
+  } else {
+    const confirmation = prompt("Login successful! Enter 'ok' to proceed."); // Affiche le prompt pour confirmer le login
+    if (confirmation !== 'ok') {
+      event.preventDefault(); // Empêche la soumission du formulaire si la confirmation n'est pas 'ok'
+    }
+  }
+});
+</script>
+</body>
+</html>
